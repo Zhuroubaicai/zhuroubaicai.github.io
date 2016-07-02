@@ -1,4 +1,4 @@
-#WordPress搭建
+
 * 1.下载解压wordpress
 
 * 2.为Wordpress创建数据库

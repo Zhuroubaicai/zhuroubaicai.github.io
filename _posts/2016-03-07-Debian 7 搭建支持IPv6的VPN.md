@@ -1,10 +1,10 @@
-##Debian 7 搭建支持IPv6的VPN
+
 
 学校宿舍可以使用**ipv6**，ipv6不收费不限速，而ipv4收费并且限速，遂用一个ipv6的代理来访问ipv4的网络资源。平常使用的**shadowsocks**并不适合这种全局代理的场景，因为需要修改分别去每个应用程序的代理设置，遂尝试搭建一个**VPN**。
 
 
 
-####在Debian上安装OpenVPN
+#### 在Debian上安装OpenVPN
 
  `#apt-get install openvpn`
 
@@ -22,7 +22,7 @@
 
 
 
-####生成CA证书和CA密钥
+#### 生成CA证书和CA密钥
 
 修改vars文件，设置证书的组织信息
 
@@ -89,7 +89,7 @@ export KEY_OU=baicai
 
 
 
-####配置OpenVPN服务器
+#### 配置OpenVPN服务器
 
 打开(新建)配置文件
 
@@ -133,7 +133,7 @@ verb 3
 
 `#service openvpn restart`
 
-####配置网络转发
+#### 配置网络转发
 
 将下面内容加入/etc/rc.local的末尾
 
