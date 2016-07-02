@@ -9,7 +9,7 @@ title:               脑残vBaiCai的备忘录
 tagline:             '呆若木鸡，大辩不言'
 description:         ''
 url:                 http://zhuroubaicai.github.io
-baseurl:             http://zhuroubaicai.github.io
+baseurl:             ''
 paginate:            5
 
 # About/contact
