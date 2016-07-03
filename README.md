@@ -1,2 +1,2 @@
-#这里是脑残的vBaiCai的<a href="Zhuroubaicai.github.io">博客</a>
+#这里是脑残vBaiCai的博客<a href="https://zhuroubaicai.github.io/">zhuroubaicai.github.io</a>
 使用了jekyll主题Lanyon
