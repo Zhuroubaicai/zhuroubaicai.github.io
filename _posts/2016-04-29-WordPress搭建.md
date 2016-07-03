@@ -1,3 +1,7 @@
+---
+layout: post
+title: WordPress搭建
+---
 
 * 1.下载解压wordpress
 
