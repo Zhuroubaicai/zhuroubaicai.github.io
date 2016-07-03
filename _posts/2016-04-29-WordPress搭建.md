@@ -38,7 +38,7 @@ title: WordPress搭建
             cp wp-config-sample.php wp-config.php
             vi wp-config.php
             ```
-            
+
     * 3.2 修改
 
         ```
@@ -53,12 +53,11 @@ title: WordPress搭建
         ```
 
 * 4.其他环境
-
-     ```
-     apt-get install php5-mysql
-     apt-get install php5-gd
-     apt-get install php5
-     apt-get install mysql-server
-     apt-get install apache2
-     ```       
+```     
+apt-get install php5-mysql
+apt-get install php5-gd
+apt-get install php5
+apt-get install mysql-server
+apt-get install apache2
+```       
     
