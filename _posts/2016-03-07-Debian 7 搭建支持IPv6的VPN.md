@@ -102,8 +102,8 @@ export KEY_OU=baicai
 
 ```
 port 1194
-proto tcp
-proto tcp6
+proto udp
+proto udp6
 dev tun
 server 192.168.234.0 255.255.255.0
 server-ipv6 2001:db8:0:123::/64
@@ -120,7 +120,7 @@ cipher AES-256-CBC
 comp-lzo
 persist-key
 persist-tun
-status openvpn-status.log #日志文件
+status /var/log/openvpn-status.log #日志文件
 verb 3
 ```
 
@@ -158,8 +158,9 @@ iptables -t nat -A POSTROUTING -j SNAT --to-source 45.32.42.34
 
 
 
-
-
+# **注意**
+*  如果你是在windows下编辑配置文件再上传到Linux服务器，可能会存在一些不被识别的  
+   字符，从而导致OpenVPN启动失败
 
 
 
