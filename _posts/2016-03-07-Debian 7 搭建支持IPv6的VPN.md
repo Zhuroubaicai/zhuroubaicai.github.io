@@ -159,8 +159,7 @@ iptables -t nat -A POSTROUTING -j SNAT --to-source 45.32.42.34
 
 
 # **注意**
-*  如果你是在windows下编辑配置文件再上传到Linux服务器，可能会存在一些不被识别的  
-   字符，从而导致OpenVPN启动失败
+*  如果你是在windows下编辑配置文件再上传到Linux服务器，可能会存在一些不被识别的字符，从而导致OpenVPN启动失败
 
 
 
