@@ -22,15 +22,24 @@ author:
 version:             1.0.0
 
 #markdown setting
-markdown: kramdown
+# markdown: kramdown
 
-kramdown:
-  input: GFM
+# kramdown:
+#   input: GFM
+#   extensions:
+#     - autolink
+#     - footnotes
+#     - smart
+#   use_coderay: true
+#   syntax_highlighter: rouge
+#   coderay:
+#     coderay_line_numbers:  nil
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
   extensions:
+    - fenced_code_blocks
+    - no_intra_emphasis
+    - strikethrough
     - autolink
-    - footnotes
-    - smart
-  use_coderay: true
-  syntax_highlighter: rouge
-  coderay:
-    coderay_line_numbers:  nil
+    - tables
