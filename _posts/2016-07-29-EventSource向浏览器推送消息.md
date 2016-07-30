@@ -19,7 +19,7 @@ title: EventSource向浏览器推消息
 ### **简单的例子**
 
 * 页面
-    ```
+    ```html
         <html>
         <head>
             <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
@@ -38,12 +38,11 @@ title: EventSource向浏览器推消息
         <body>
         </body>
         </html>
-
     ```
 
 * 后端消息推送
 
-    ```
+    ```python
         from flask import Flask
         from flask import Response
         import time
