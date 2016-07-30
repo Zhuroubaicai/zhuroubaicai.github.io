@@ -30,7 +30,7 @@ title: EventSource向浏览器推消息
                     //绑定Server-Send事件
                     sse.onmessage = function(e){
                         var msg = '<div>' + e.data + '</div>';
-                        $(document.body).append(msg);                    
+                        $(document.body).append(msg);
                     }
                 })
         </script>
