@@ -29,7 +29,7 @@ title: Debian7搭建支持IPv6的OpenVPN
 
 修改vars文件，设置证书的组织信息
 
-```
+``` shell
 #cd /etc/openvpn/easy-rsa
 #vi ./vars
 ```
@@ -38,7 +38,7 @@ title: Debian7搭建支持IPv6的OpenVPN
 
 根据实际情况修改下面项目（也可不修改），记住KEY_NAME
 
-```
+``` shell
 export KEY_COUNTRY="CH"
 export KEY_PROVINCE="NM"
 export KEY_CITY="HOHHOT"
@@ -85,7 +85,7 @@ export KEY_OU=baicai
 
 设置服务器上的证书和密钥
 
-```
+```shell
 #mkdir /etc/openvpn/certs
 #cp -pv /etc/openvpn/easy-rsa/keys/{ca.{crt,key},vpnbaicai.{crt,key},ta.key,dh1024.pem} /etc/openvpn/certs/
 ```
@@ -100,7 +100,7 @@ export KEY_OU=baicai
 
 修改如下
 
-```
+```shell
 port 1194
 proto udp
 proto udp6
@@ -140,13 +140,13 @@ verb 3
 
 将下面内容加入/etc/rc.local的末尾
 
-```
+```shell
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 设置iptables规则
 
-```
+```shell
 iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -s 192.168.234.0/24 -j ACCEPT
 iptables -A FORWARD -j REJECT
@@ -159,7 +159,8 @@ iptables -t nat -A POSTROUTING -j SNAT --to-source 45.32.42.34
 
 
 # **注意**
-*  如果你是在windows下编辑配置文件再上传到Linux服务器，可能会存在一些不被识别的字符，从而导致OpenVPN启动失败
+
+* 如果你是在windows下编辑配置文件再上传到Linux服务器，可能会存在一些不被识别的字符，从而导致OpenVPN启动失败
 
 
 
