@@ -19,8 +19,9 @@ title: EventSource向浏览器推消息
 ### **简单的例子**
 
 * 页面
+
     ```html
-        <html>
+    <html>
         <head>
             <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
             <script>
@@ -37,7 +38,7 @@ title: EventSource向浏览器推消息
         </head>
         <body>
         </body>
-        </html>
+    </html>
     ```
 
 * 后端消息推送
