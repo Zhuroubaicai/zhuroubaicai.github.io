@@ -9,7 +9,7 @@ title:               脑残vBaiCai的备忘录
 tagline:             '呆若木鸡，大辩不言'
 description:         ''
 url:                 https://zhuroubaicai.github.io
-baseurl:             'https://zhuroubaicai.github.io'
+baseurl:             ''
 paginate:            5
 
 # About/contact
@@ -34,8 +34,10 @@ version:             1.0.0
 #   syntax_highlighter: rouge
 #   coderay:
 #     coderay_line_numbers:  nil
-highlighter: pygments
-markdown: redcarpet
+highlight:            true
+
+highlighter:          pygments
+markdown:             redcarpet
 redcarpet:
   extensions:
     - fenced_code_blocks
