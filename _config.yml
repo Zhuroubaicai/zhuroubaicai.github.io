@@ -21,5 +21,11 @@ author:
 # Custom vars
 version:             1.0.0
 
-#markdown
-markdown:            kramdown
+#markdown setting
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
