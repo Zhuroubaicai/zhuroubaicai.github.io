@@ -20,6 +20,7 @@ title: EventSource向浏览器推消息
 
 * 页面
     ```html
+    
     <html>
     <head>
         <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
