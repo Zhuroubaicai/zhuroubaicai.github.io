@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           date
+permalink:           pretty
 #relative_permalinks: true
 
 # Setup
@@ -9,7 +9,9 @@ title:               脑残vBaiCai的备忘录
 tagline:             '呆若木鸡，大辩不言'
 description:         '呆若木鸡'
 url:                 ''
-baseurl:             ''
+baseurl:             'http://zhuroubaicai.github.io/'
+#Test 
+#baseurl:             ''
 paginate:            5
 
 # About/contact
