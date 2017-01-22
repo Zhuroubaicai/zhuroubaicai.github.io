@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="page">
-  <a href="{{ site.baseurl }}{{ page.id }}">
+  <a href="{{ site.baseurl | append: page.url | replace: '//','/' }}">
     <h1 class="page-title">{{ page.title }}</h1>
   </a>
   {{ content }}
