@@ -20,57 +20,53 @@ title: EventSource向浏览器推消息
 
 * 页面
 
-    ```html
-    <html>
-        <head>
-            <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
-            <script>
-                    $(document).ready(function(){
-                            //初始化EventSource对象
-                        var sse = new EventSource("http://127.0.0.1:5000")
-                        //绑定Server-Send事件
-                        sse.onmessage = function(e){
-                                var msg = '<div>' + e.data + '</div>';
-                            $(document.body).append(msg);
-                        }
-                    })
-            </script>
-        </head>
-        <body>
-        </body>
-    </html>
-    ```
+ ```
+<html>
+    <head>
+        <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+        <script>
+                $(document).ready(function(){
+                        //初始化EventSource对象
+                    var sse = new EventSource("http://127.0.0.1:5000")
+                    //绑定Server-Send事件
+                    sse.onmessage = function(e){
+                            var msg = '<div>' + e.data + '</div>';
+                        $(document.body).append(msg);
+                    }
+                })
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+```
 
 * 后端消息推送
 
-    ```python
-        from flask import Flask
-        from flask import Response
-        import time
-        import random
-        import os
-
-        app = Flask(__name__)
-
-        @app.route("/")
-        def subscribe():
-            def gen():
-                while True:
-                    # 以随机的时间间隔推送消息
-                    time.sleep(int(random.uniform(1,10)))
-                    # 生成每次推送的内容
-                    data = str(os.urandom(10))
-                    # 格式化为eventsource要求的数据格式，注意添上\n\n
-                    msg = 'data:{}\n\n'.format(data)
-                    # 返回msg
-                    yield msg
-
-            resp = Response(gen(),mimetype="text/event-stream")
-            resp.headers['Access-Control-Allow-Origin']= '*'
-            return resp
-
-        if __name__ == "__main__":
-            app.debug = True
-            app.run()
-    ```
+```
+from flask import Flask
+from flask import Response
+import time
+import random
+import os
+app = Flask(__name__)
+@app.route("/")
+def subscribe():
+    def gen():
+        while True:
+            # 以随机的时间间隔推送消息
+            time.sleep(int(random.uniform(1,10)))
+            # 生成每次推送的内容
+            data = str(os.urandom(10))
+            # 格式化为eventsource要求的数据格式，注意添上\n\n
+            msg = 'data:{}\n\n'.format(data)
+            # 返回msg
+            yield msg
+    resp = Response(gen(),mimetype="text/event-stream")
+    resp.headers['Access-Control-Allow-Origin']= '*'
+    return resp
+if __name__ == "__main__":
+    app.debug = True
+    app.run()
+```
 
