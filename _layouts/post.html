@@ -3,9 +3,7 @@ layout: default
 ---
 
 <div class="post">
-  <a href="{{ site.baseurl | append: page.url | replace: '//','/' }}">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </a>
+  <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
 </div>
@@ -16,7 +14,7 @@ layout: default
     {% for post in site.related_posts limit:3 %}
       <li>
         <h3>
-          <a href="{{ site.baseurl | append: post.url | replace: '//','/' }}">
+          <a href="{{ site.baseurl | append: post.url }}">
             {{ post.title }}
             <small>{{ post.date | date_to_string }}</small>
           </a>
