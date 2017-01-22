@@ -8,8 +8,8 @@ permalink:           pretty
 title:               脑残vBaiCai的备忘录
 tagline:             '呆若木鸡,大辩不言'
 description:         '呆若木鸡,热爱生活'
-url:                 'https://zhuroubaicai.github.io/'
-baseurl:             'https://zhuroubaicai.github.io/'
+url:                 ''
+baseurl:             ''
 #Test Config
 # url:                ''
 # baseurl:            ''
