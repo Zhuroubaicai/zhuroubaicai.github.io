@@ -1,6 +1,6 @@
 ---
 layout: psot
-title: SSH Server常用配置
+title: SSH Server配置
 ---
 
 ## 生成密钥

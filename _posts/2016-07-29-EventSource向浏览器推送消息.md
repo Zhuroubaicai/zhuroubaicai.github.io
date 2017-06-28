@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EventSource向浏览器推消息
+title: EventSource推送消息(SSE)
 ---
 
 久远以前用JSP+Servlet实现过一个聊天室，使用的是AJAX轮询的方式，来交换服务器和浏览器的数据。但是，轮询的方式在实际的使用中，对于服务器访问过于频繁，并且浏览器发送请求也太频繁，所以上网搜索有没有其他方式。
@@ -9,7 +9,7 @@ title: EventSource向浏览器推消息
 
 * AJAX轮询--------------查询的时间间隔太长或太短都有害处
 * WebSocket-------------实现比较复杂，适合双向通行
-* EventSource-----------简单方便，适合服务器向浏览器推送给数据
+* EventSource-----------简单方便，适合服务器向浏览器推送给数据,W3C标准之一
 
 ### **EventSouce在W3School上的介绍**
 
