@@ -41,7 +41,7 @@ body {
 }
 
 html {
-  font-family: "Noto Serif SC";
+  font-family: "source-han-serif-sc";
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "Noto Sans SC";
+  font-family: "source-han-serif-sc";
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
   background-color: #202020;
@@ -368,7 +368,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "Noto Sans SC";
+  font-family: "source-han-serif-sc";
   color: #ccc;
   text-align: center;
 }
