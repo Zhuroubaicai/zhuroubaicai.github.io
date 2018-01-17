@@ -20,30 +20,30 @@ title: EventSource推送消息(SSE)
 
 * 页面
 
-```
+```html
 <html>
-    <head>
-        <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
-        <script>
-                $(document).ready(function(){
-                        //初始化EventSource对象
-                    var sse = new EventSource("http://127.0.0.1:5000")
-                    //绑定Server-Send事件
-                    sse.onmessage = function(e){
-                            var msg = '<div>' + e.data + '</div>';
-                        $(document.body).append(msg);
-                    }
-                })
-        </script>
-    </head>
-    <body>
-    </body>
+<head>
+  <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.js"></script>
+  <script>
+     $(document).ready(function(){
+       //初始化EventSource对象
+       var sse = new EventSource("http://127.0.0.1:5000")
+       //绑定Server-Send事件
+       sse.onmessage = function(e){
+         var msg = '<div>' + e.data + '</div>';
+         $(document.body).append(msg);
+       }
+    })
+  </script>
+</head>
+<body>
+</body>
 </html>
 ```
 
 * 后端消息推送
 
-```
+```python
 from flask import Flask
 from flask import Response
 import time
