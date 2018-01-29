@@ -33,3 +33,16 @@ config.gpu_options.allow_growth = True
 session = tf.Session(config=config, ...) 
 ```
 [SIMD]:https://zh.wikipedia.org/wiki/%E5%8D%95%E6%8C%87%E4%BB%A4%E6%B5%81%E5%A4%9A%E6%95%B0%E6%8D%AE%E6%B5%81
+
+## 安装 CUDA 驱动
+
+1. 屏蔽 nouveau 模块, 修改/etc/modprobe.d/blacklist.conf，在末尾加入
+```
+blacklist nouveau
+options nouveau modeset=0
+```
+
+2. 更新 initramfs
+```bash
+update-initramfs -u
+```
