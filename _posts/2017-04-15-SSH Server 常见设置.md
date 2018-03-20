@@ -1,6 +1,6 @@
 ---
 layout: psot
-title: SSH Server配置
+title: SSH 配置
 ---
 
 ## 生成密钥
@@ -12,3 +12,11 @@ PasswordAuthentication yes
 PermitRootLogin yes
    
 ```
+
+
+## 一条命令将公钥添加到服务器
+
+```
+ssh-copy-id username@server_address
+```
+
