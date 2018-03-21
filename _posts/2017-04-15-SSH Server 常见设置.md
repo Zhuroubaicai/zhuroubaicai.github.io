@@ -20,3 +20,7 @@ PermitRootLogin yes
 ssh-copy-id username@server_address
 ```
 
+## 私钥的权限
+```
+chmod 400 ~/.ssh/id_rsa
+```

@@ -51,16 +51,22 @@ update-initramfs -u
 
 1. 很可能是系统的 linux kernel 太新了。如果装的是 CUDA 8.0，kernel 降级到 4.4.0 是一个省心的选择  
 
-2. 卸载现在的kernel 
+2. 安装 4.4.0 版本的kernel
+```
+apt-get install linux-image-4.4.0-21-generic
+apt-get install linux-source-4.4.0
+apt-get install linux-headers-4.4.0-21-generic
+```
+
+3. 卸载现在的kernel 
 ```
 apt-get purge linux-image-$(uname -r)
 apt-get purge linux-source-$(uname -r)
 apt-get purge linux-headers-$(uname -r)
 ```
 
-3. 安装 4.4.0 版本的kernel
+4. 
 ```
-apt-get install linux-image-4.4.0-21-generic
-apt-get install linux-source-4.4.0
-apt-get install linux-headers-4.4.0-21-generic
+update-initramfs -u
 ```
+
