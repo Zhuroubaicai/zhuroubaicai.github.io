@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python 显示进度条 progressbar2 
+title: Python 进度条 progressbar2 
 ---
 ### 1. 安装
 
@@ -10,7 +10,7 @@ pip install progressbar2
 
 ### 2. 使用
 
-```Python
+```python
 from progressbar import ProgressBar
 
 # 1000 steps

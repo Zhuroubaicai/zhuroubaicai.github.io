@@ -3,7 +3,7 @@ layout: post
 title: Python 多进程库 concurrent 
 ---
 
-```Python
+```python
 from concurrent.futures import ProcessPoolExecutor
 
 executor = ProcessPoolExecutor(max_workers=20)
