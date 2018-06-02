@@ -4,7 +4,7 @@ title: Python 进度条 progressbar2
 ---
 ### 1. 安装
 
-```bash
+```sh
 pip install progressbar2
 ```
 

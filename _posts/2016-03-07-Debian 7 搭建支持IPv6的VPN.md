@@ -100,7 +100,7 @@ export KEY_OU=baicai
 
 修改如下
 
-```shell
+```sh
 port 1194
 proto udp
 proto udp6
@@ -140,13 +140,13 @@ verb 3
 
 将下面内容加入/etc/rc.local的末尾
 
-```shell
+```sh
 echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 设置iptables规则
 
-```shell
+```sh
 iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A FORWARD -s 192.168.234.0/24 -j ACCEPT
 iptables -A FORWARD -j REJECT

@@ -16,11 +16,11 @@ PermitRootLogin yes
 
 ## 一条命令将公钥添加到服务器
 
-```
+```sh
 ssh-copy-id username@server_address
 ```
 
 ## 私钥的权限
-```
+```sh
 chmod 400 ~/.ssh/id_rsa
 ```
