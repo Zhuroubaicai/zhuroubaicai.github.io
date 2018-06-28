@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 从远程写入 Mac OSX 本地剪切板 pbcopy 
+title: 从远程写入 OSX 本地剪切板 pbcopy 
 ---
 
 ### **1.** 端口转发
