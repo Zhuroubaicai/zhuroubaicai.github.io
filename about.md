@@ -4,8 +4,8 @@ title: About
 ---
 
 <p class="message">
-   这里是vBaiCai的Blog, 记录一些鸡毛蒜皮。
+   这里是 vBaiCai 的 Blog, 用来缓解健忘带来的焦虑感。
    <br>
-   <a href="https://github.com/vbaicai/resume/blob/master/resume-zh.pdf">我的简历</a>
+   <a href="https://github.com/vBaiCai/resume/blob/master/main.pdf">我的简历</a>
 </p>
 
